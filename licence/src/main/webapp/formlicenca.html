@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Cadastrar nova licença</title>
+	
+	<style>
+		body {
+			background-color: black;
+			color: green;
+			text-align: center;
+		}
+		table {
+			margin: 0 auto;
+		}
+		td {
+			padding: 5px;
+		}
+		input[type=text], select, input[type=radio] {
+			background-color: black;
+			color: green;
+			border: 1px solid green;
+			padding: 5px;
+			border-radius: 5px;
+		}
+		input[type=submit] {
+			background-color: green;
+			color: black;
+			border: none;
+			padding: 10px;
+			border-radius: 5px;
+			cursor: pointer;
+		}
+	</style>
+</head>
+<a href="index.jsp">Página Inicial</a>
+<body>
+	<h1>Cadastrar Licença</h1>
+	<form action="addlicenca.jsp" method="post">
+		<table>
+			<tr>
+				<td>Nome:</td>
+				<td><input type="text" name="nome" /></td>
+			</tr>
+			<tr>
+				<td>Serial:</td>
+				<td><input type="text" name="serialnumber" /></td>
+			</tr>
+			<tr>
+				<td>Fabricante: </td>
+				<td>
+				<select name="fabricante">
+				    <option>MICROSOFT</option>
+				    <option>ADOBE</option>
+				    <option>AUTODESK</option>
+				    <option>COREL</option>
+				    <option>IBM</option>
+				    <option>ORACLE</option>
+				    <option>SYMANTEC</option>
+				    <option>VMWARE</option>
+				    <option>APPLE</option>
+				    <option>OUTRO</option>
+				</select>
+
+				</td>		
+			</tr>
+			<tr>
+				<td>Status:</td>
+				<td>
+					<input type="radio" name="statuslicenca" value="Ativada" />Ativada
+					<input type="radio" name="statuslicenca" value="Expirada" />Expirada
+				</td>
+			</tr>
+			<tr>
+				<td>Tombamento:</td>
+				<td><input type="text" name="tombamento" /></td>
+			</tr>
+			<tr>
+				<td colspan="2">
+					<input type="submit" value="Adicionar Licença" />
+				</td>
+			</tr>
+		</table>
+	</form>
+	
+</body>
+</html>
